@@ -1,0 +1,35 @@
+﻿@model PartyInvites.Models.GuestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <title>Dziękujemy</title>
+    <style>
+        body {
+            background-color: #F1F1F1;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+    <h1>Dziękujemy, @Model.Name!</h1>
+    <div class="lead">
+        @if (Model.WillAtend == true)
+        {
+            @:Cieszymy się, że przyjdziesz do nas. Napoje są już w lodówce!
+        }
+        else
+        {
+            @: Przykro nam, że nie możesz się zjawić, ale dziękujemy za informację.
+        }
+    </div>
+</div>
+</body>
+</html>
